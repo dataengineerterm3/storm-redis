@@ -1,13 +1,19 @@
-package yieldbot.storm;
+package storm;
 
-import yieldbot.storm.spout.RedisPubSubSpout;
+import storm.spout.RedisPubSubSpout;
 import backtype.storm.Config;
 import backtype.storm.LocalCluster;
 import backtype.storm.topology.TopologyBuilder;
 import backtype.storm.utils.Utils;
 
 public class RedisPubSubTopology {
+
+
 	public static void main(String[] args) {
+        args = new String[3];
+        args[0] = "127.0.0.1";
+        args[1] = "6379";
+        args[2] = "data";
         String host = args[0];
         int port = Integer.parseInt(args[1]);
         String pattern = args[2];
@@ -23,7 +29,7 @@ public class RedisPubSubTopology {
         
         cluster.submitTopology("test", conf, builder.createTopology());
         Utils.sleep(10000);
-        cluster.killTopology("test");
-        cluster.shutdown();
+        //cluster.killTopology("test");
+        //cluster.shutdown();
     }
 }

@@ -1,5 +1,4 @@
-package yieldbot.storm.spout;
-
+package storm.spout;
 import static backtype.storm.utils.Utils.tuple;
 
 import java.util.Map;
