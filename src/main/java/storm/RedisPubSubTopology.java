@@ -31,5 +31,6 @@ public class RedisPubSubTopology {
         Utils.sleep(10000);
         //cluster.killTopology("test");
         //cluster.shutdown();
+        //
     }
 }
