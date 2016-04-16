@@ -1,3 +1,5 @@
 # storm-pubsub
 
 A simple spout for reading messages off of a Redis PubSub.
+
+storm jar targeStorm-Redis-PubSub-0.0.1-SNAPSHOT-jar-with-dependencies.jar storm.RedisPubSubTopology
